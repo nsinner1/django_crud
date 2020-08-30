@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Django CRUD</title>
+{% endblock title %}
+
+{% block header %}
+<header>
+    <h1>Home of the Books</h1>
+    <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'create' %}">Create</a></li>
+            </ul>
+        </nav>
+</header>
+{% endblock header %}
+
+{% block content %}
+    <h2>Book list</h2>
+    <ul>
+        {% for books in object_list %}
+        <li>Book: <a href="{% url 'books' books.id %}">{{ books.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
+
+{% block footer %}
+<footer>
+    <h1>Website by Natalie Sinner</h1>
+</footer>
+{% endblock footer %}

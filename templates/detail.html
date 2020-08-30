@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Book Details</title>
+{% endblock title %}
+
+{% block header %}
+<header>
+    <h1>Book Details</h1>
+</header>
+{% endblock header %}
+
+{% block content %}
+    <h2> Title: {{ books.title }}</h2>
+    <p> About: {{ books.body }}</p>
+{% endblock content %}
+
+{% block footer %}
+<footer>
+    <h1>Website by Natalie Sinner</h1>
+</footer>
+{% endblock footer %}

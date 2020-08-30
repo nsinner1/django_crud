@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Book Delete</title>
+{% endblock title %}
+
+{% block header %}
+<header>
+    <h1>Book Delete</h1>
+</header>
+{% endblock header %}
+
+{% block content %}
+
+<p>Are you sure you want to delete the book: {{ books.title }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Delete Entry">
+</form>
+
+{% endblock content %}
+
+{% block footer %}
+<footer>
+    <h1>Website by Natalie Sinner</h1>
+</footer>
+{% endblock footer %}
