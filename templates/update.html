@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Book Update</title>
+{% endblock title %}
+
+{% block header %}
+<header>
+    <h1>Book Update</h1>
+</header>
+{% endblock header %}
+
+{% block content %}
+
+    <h2>Welcome main h2</h2>
+
+    <form action='' method='POST'>
+        {% csrf_token %}
+        <table> {{ form.as_p }} </table>
+        <input type='submit' text='Update Entry'>
+    </form>
+    
+{% endblock content %}
+
+{% block footer %}
+<footer>
+    <h1>Website by Natalie Sinner</h1>
+</footer>
+{% endblock footer %}
